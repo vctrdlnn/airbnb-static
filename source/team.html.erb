@@ -1,0 +1,19 @@
+---
+title: Middleman Team
+---
+<div class="wrapper-team">
+  <h1>Our Team</h1>
+  <ul class="list-inline text-center">
+    <% ["anne", "seb", "romain"].each do |member| %>
+      <li>
+        <h3><%= member.capitalize %></h3>
+        <%= image_tag "#{member}.jpg", class: "img-circle avatar-xlarge" %>
+      </li>
+    <% end %>
+  </ul>
+  <% link_to 'mailto:contact@airbnb.com' do %>
+    <h2>
+      <i class="fa fa-envelope" aria-hidden="true">contact@airbnb.com</i>
+    </h2>
+  <% end %>
+</div>

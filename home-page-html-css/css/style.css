@@ -1,3 +1,9 @@
+@import url("components/avatar.css");
+@import url("components/banner.css");
+@import url("components/footer.css");
+@import url("components/card.css");
+@import url("components/feature.css");
+
 body {
   margin: 0;
   font-family: Open-sans, sans-serif;
@@ -16,10 +22,4 @@ h2 {
 }
 .wrapper-grey {
   background: #F4F4F4;
-}
-.wrapper-team {
-  text-align: center;
-}
-.wrapper-team li {
-  padding: 30px;
 }
