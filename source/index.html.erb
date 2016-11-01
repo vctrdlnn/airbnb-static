@@ -4,7 +4,7 @@ title: Test Super Title
 
     <div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background.jpg');">
       <div class="banner-content">
-        <h1>WELCOME HOME</h1>
+        <h1>Welcome Home</h1>
         <p>Rent unique places to stay from local hosts in 190+ countries.</p>
         <form action="#" class="form-inline">
           <input type="text" class="form-control input-lg" placeholder="checkin">
@@ -42,10 +42,28 @@ title: Test Super Title
         </div>
       </div>
     </div>
+
+    <!-- CARDS -->
+
+
     <div class="wrapper-grey padded">
       <div class="container">
         <h2 class="text-center">Your next trip</h2>
         <div class="row">
+          <% data.flats.each do |owner, flat| %>
+            <div class="col-xs-12 col-sm-4">
+              <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= flat.picture %>);">
+                <div class="card-category"><%= flat.city %></div>
+                <div class="card-description">
+                  <h2><%= flat.name %></h2>
+                  <p><%= flat.summary %></p>
+                </div>
+                <%= image_tag flat.owner_picture, class: "card-user avatar avatar-large" %>
+                <a class="card-link" href="#" ></a>
+              </div>
+            </div>
+
+          <% end %>
           <div class="col-xs-12 col-sm-4">
             <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-paris.jpg');">
               <div class="card-category">Paris</div>
